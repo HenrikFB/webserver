@@ -20,6 +20,10 @@ app.get('/about', middleware.requireAuthentication, function(req, res){
 	res.send('My name is Henrik!hehe');
 });
 
+app.get('/', middleware.requireAuthentication, function(req, res){
+	res.send('My name is Henrik!hehe');
+});
+
 app.use(express.static(__dirname + '/public'));
 
 app.listen(PORT, function() {
